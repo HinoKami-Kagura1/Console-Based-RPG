@@ -6,6 +6,7 @@
 class MainMenu {
 
 public:
+
     void display() {
 
         std::cout << "Welcome to the Jungle." << std::endl;
