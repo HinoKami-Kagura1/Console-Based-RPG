@@ -13,6 +13,7 @@ void Play() {
 void Credit() {
 
     std::cout << "Author: Stardust " << std::endl;
+    std::cout << " " << std::endl;
     std::cout << "How to play" << std::endl;
     std::cout << "The player makes a series of choices when battleling enemy combanatans." << std::endl;
     std::cout << "The players inputs 1 to attack" <<std::endl;
