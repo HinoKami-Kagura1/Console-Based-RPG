@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "main.cpp", "MainMenu.cpp", "Utils.cpp", "Gameplay.cpp", "PlayerStats.cpp", "EnemyStats.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

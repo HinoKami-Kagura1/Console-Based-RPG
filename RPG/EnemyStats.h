@@ -2,11 +2,26 @@
 #define ENEMYSTATS_H
 
 
-struct EnemyStat {
+struct SlimeStats {
 
-    int EnemyStat;
-    int EnemyDefense;
-    int EnemyAttack; 
+    int SlimeHealth;
+    int SlimeDefense;
+    int SlimeAttack; 
+
+};
+
+struct GoblinStats {
+
+    int GoblinHealth; 
+    int GoblinDefense;
+    int GoblinAttack;
+
+};
+
+struct MinotaurStats {
+    int MinotaurHealth;
+    int MinotaurDefense;
+    int MinotaurAttack;
 
 };
 

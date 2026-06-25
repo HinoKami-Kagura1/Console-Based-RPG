@@ -4,8 +4,9 @@
 #include "EnemyStats.h"
 #include "Gameplay.h"
 
-int main() {
 
+int main() {
+    
     MainMenu menu;
     menu.display();
     

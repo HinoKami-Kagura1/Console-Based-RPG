@@ -5,7 +5,7 @@ void Gameplay() {
 
     //Attack Phase
 
-    std::cout << "Round 1" << std::endl;; 
+    std::cout << "Round 1" << std::endl; 
 
     std::cout << "Player Turn" << std::endl;
 

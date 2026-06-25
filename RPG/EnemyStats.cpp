@@ -2,19 +2,9 @@
 #include "EnemyStats.h"
 
 
-struct EnemyStats {
+SlimeStats slime = {10, 50, 5};
 
-    int SlimeStat = 10;
-    int SlimeDefense = 50;
-    int SlimeAttack = 5; 
+GoblinStats goblin = {50, 50, 20};
 
-    int GoblinHealth = 50; 
-    int GoblinDefense = 50;
-    int GoblinAttack = 20;
-
-    int MinotaurHealth = 100;
-    int MinotaurDenfense = 100;
-    int MinotaurAttack = 50;
-
-} slime, goblin, minotaur;
+MinotaurStats minotaur = {100, 100, 50};
 

@@ -1,35 +1,38 @@
 #include <iostream>
 #include "MainMenu.h"
 #include "Utils.h"
+#include "Gameplay.h"
 
 
-class MainMenu {
+void MainMenu::display() {
 
-public:
+    std::cout << "Welcome to the Jungle." << std::endl;
+    std::cout << "1. Play" << std::endl;
+    std::cout << "2. Credit" << std::endl; 
 
-    void display() {
+    int press;
 
-        std::cout << "Welcome to the Jungle." << std::endl;
-        std::cout << "1. Play" << std::endl;
-        std::cout << "2. Credit" << std::endl; 
+    std::cout << "Enter a number.";
+    std::cin >> press;
 
-        int press;
-        std::cin >> press;
 
         if (press == 1) {
 
-            Play(); 
+            Gameplay();
+
 
         }
-        else if (press == 2) {
 
+        else if (press == 2) {
+        
             Credit();  
 
         }
+
         else {
 
             std::cout << "Choose Play or Credit";
 
         }
-    } 
+        
 };

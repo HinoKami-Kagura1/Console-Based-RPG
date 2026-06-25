@@ -3,10 +3,10 @@
 
 class MainMenu {
 
-public:
+    public: 
 
-    void display();
-    
+        void display();
+
 };
-
-#endif
+    
+#endif  
