@@ -18,7 +18,7 @@ void MainMenu::display() {
 
         if (press == 1) {
 
-            Gameplay();
+            Play();
 
 
         }

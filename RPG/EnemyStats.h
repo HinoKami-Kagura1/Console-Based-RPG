@@ -19,6 +19,7 @@ struct GoblinStats {
 };
 
 struct MinotaurStats {
+    
     int MinotaurHealth;
     int MinotaurDefense;
     int MinotaurAttack;
