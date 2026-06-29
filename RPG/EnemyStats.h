@@ -26,5 +26,9 @@ struct MinotaurStats {
 
 };
 
+
+extern SlimeStats slime;
+extern GoblinStats goblin;
+extern MinotaurStats minotaur;
 #endif
 

@@ -10,5 +10,7 @@ struct PlayerStats {
 
 };
 
+extern PlayerStats hero;
+
 #endif
 

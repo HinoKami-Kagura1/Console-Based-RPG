@@ -2,7 +2,9 @@
 #define COMBATSYSTEM_H
 
 
-
+int playerAttack(PlayerStats& player, int enemyDefense);
+int playerDefend(PlayerStats& player, int enemyAttack);
+void playerHeal(PlayerStats& player);
 
 
 #endif
