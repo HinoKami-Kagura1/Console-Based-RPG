@@ -9,18 +9,22 @@ int playerAttack(PlayerStats& player, int enemyDefense) {
 
     int damage = player.PlayerAttack - (enemyDefense / 2);
 
-    if (damage < 1) damage = 1;
+    if (damage < 1) {
+        
+        damage = 1;
+
+    }
 
     return damage;
 
 }
 
-int playerDefend(PlayerStats& player, int enemyAttack) {
+int playerDefend(PlayerStats& player, int enemyDamage) {
 
 
     float reduction = player.PlayerDefense / (player.PlayerDefense / 100.f);
     
-    int reducedDamage = static_cast<int>(enemyAttack * (1.0f - reduction));
+    int reducedDamage = enemyDamage * 1.0f - reduction;
 
     return reducedDamage;
 
@@ -30,6 +34,7 @@ int playerDefend(PlayerStats& player, int enemyAttack) {
 int playerHeal(int currentHealth, int maxHealth) {
 
     const int HEAL_AMOUNT = 30;
+    const int maxHealth = 100;
     
     if (currentHealth == maxHealth) {
 

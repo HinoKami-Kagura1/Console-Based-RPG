@@ -3,7 +3,7 @@
 
 
 int playerAttack(PlayerStats& player, int enemyDefense);
-int playerDefend(PlayerStats& player, int enemyAttack);
+int playerDefend(PlayerStats& player, int enemyDamage);
 void playerHeal(PlayerStats& player);
 
 
