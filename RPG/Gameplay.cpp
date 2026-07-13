@@ -24,7 +24,7 @@ void Gameplay() {
     int hero_choice; 
 
     std::cout << " " << std::endl;
-    std::cout << "Player: 1. Attack \n 2. Defend \n 3. Player Heal " << std::endl;
+    std::cout << "Player: \n 1. Attack \n 2. Defend \n 3. Heal " << std::endl;
     std::cout << " " << std::endl;
 
 
@@ -50,8 +50,8 @@ void Gameplay() {
         int enemyDamage = playerDefend(hero, slime.SlimeAttack);
         hero.PlayerHealth -= enemyDamage;
 
-        std::cout << "Slime dealt " << enemyDamage << "damage!" << std::endl;
-        std::cout << "Hero has " << hero.PlayerHealth << "health left." << std::endl;
+        std::cout << "Slime dealt " << enemyDamage << " damage!" << std::endl;
+        std::cout << "Hero has " << hero.PlayerHealth << " health left." << std::endl;
 
 
     }
@@ -64,8 +64,8 @@ void Gameplay() {
         int enemyDamage = playerDefend(hero, slime.SlimeAttack);
         hero.PlayerHealth -= enemyDamage;
         
-        std::cout << "Slime dealt " << enemyDamage << "damage!" << std::endl;
-        std::cout << "Hero has " << hero.PlayerHealth << "health left." << std::endl;
+        std::cout << "Slime dealt " << enemyDamage << " damage!" << std::endl;
+        std::cout << "Hero has " << hero.PlayerHealth << " health left." << std::endl;
 
 
     }
@@ -75,11 +75,11 @@ void Gameplay() {
         std::cout << "Hero Heal" << std::endl;
         playerHeal(hero);
 
-        int enemyDamage = playerDefend(hero, slime.SlimeAttack);
+        int enemyDamage = slime.SlimeAttack;
         hero.PlayerHealth -= enemyDamage;
         
-        std::cout << "Slime dealt " << enemyDamage << "damage!" << std::endl;
-        std::cout << "Hero has " << hero.PlayerHealth << "health left." << std::endl;
+        std::cout << "Slime dealt " << enemyDamage << " damage!" << std::endl;
+        std::cout << "Hero has " << hero.PlayerHealth << " health left." << std::endl;
 
         
 

@@ -3,8 +3,11 @@
 #include "Gameplay.h"
 
 void Play() {
-    std::cout << "Start Game" << std::endl;
+
+    std::cout << " " << std::endl;
+    std::cout << "Start Game!" << std::endl;
     Gameplay();  
+
 }
 
 void Credit() {

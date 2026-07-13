@@ -22,7 +22,14 @@ int playerDefend(PlayerStats& player, int enemyDamage) {
     float reduction = player.PlayerDefense / (player.PlayerDefense / 100.f);
     int reducedDamage = enemyDamage * 1.0f - reduction;
 
+    if (reducedDamage < 1) {
+        
+        reducedDamage = 0;
+
+    }
+
     return reducedDamage;
+
 }
 
 
@@ -47,6 +54,6 @@ void playerHeal(PlayerStats& player) {
     }
     
     player.PlayerHealth = newHealth;  
-    
+
     std::cout << "Player healed to " << player.PlayerHealth << " health!" << std::endl;
 }
