@@ -9,10 +9,12 @@ void MainMenu::display() {
     std::cout << "Welcome to the Jungle." << std::endl;
     std::cout << "1. Play" << std::endl;
     std::cout << "2. Credit" << std::endl; 
+    std::cout << " " << std::endl;
+
 
     int press;
 
-    std::cout << "Enter a number.";
+    std::cout << "Enter a number:";
     std::cin >> press;
 
 

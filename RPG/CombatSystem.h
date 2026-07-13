@@ -1,5 +1,6 @@
 #ifndef COMBATSYSTEM_H
 #define COMBATSYSTEM_H
+#include "PlayerStats.h"
 
 
 int playerAttack(PlayerStats& player, int enemyDefense);

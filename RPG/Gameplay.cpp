@@ -8,6 +8,8 @@ void Gameplay() {
 
     //Attack Phase
 
+
+    std::cout << " " << std::endl;
     std::cout << "Round 1" << std::endl; 
 
     std::cout << "Player Turn" << std::endl;
@@ -21,7 +23,10 @@ void Gameplay() {
 
     int hero_choice; 
 
+    std::cout << " " << std::endl;
     std::cout << "Player: 1. Attack \n 2. Defend \n 3. Player Heal " << std::endl;
+    std::cout << " " << std::endl;
+
 
     std::cin >> hero_choice;
 

@@ -4,55 +4,49 @@
 #include "PlayerStats.h"
 #include "EnemyStats.h"
 
-
 int playerAttack(PlayerStats& player, int enemyDefense) {
 
     int damage = player.PlayerAttack - (enemyDefense / 2);
 
     if (damage < 1) {
-        
+
         damage = 1;
 
     }
 
     return damage;
-
 }
 
 int playerDefend(PlayerStats& player, int enemyDamage) {
 
-
     float reduction = player.PlayerDefense / (player.PlayerDefense / 100.f);
-    
     int reducedDamage = enemyDamage * 1.0f - reduction;
 
     return reducedDamage;
-
 }
 
 
-int playerHeal(int currentHealth, int maxHealth) {
+void playerHeal(PlayerStats& player) {
 
     const int HEAL_AMOUNT = 30;
     const int maxHealth = 100;
     
-    if (currentHealth == maxHealth) {
+    if (player.PlayerHealth == maxHealth) {
 
         std::cout << "Player cannot heal - already at max health!" << std::endl;
+        return;
 
-        return currentHealth; 
     }
     
-    int newHealth = currentHealth + HEAL_AMOUNT;
+    int newHealth = player.PlayerHealth + HEAL_AMOUNT;
 
     if (newHealth > maxHealth) {
 
         newHealth = maxHealth;
+
     }
     
-    std::cout << "Player healed to " << newHealth << " health!" << std::endl;
-
-    return newHealth;
-}
+    player.PlayerHealth = newHealth;  
     
-
+    std::cout << "Player healed to " << player.PlayerHealth << " health!" << std::endl;
+}
