@@ -111,7 +111,7 @@ void Gameplay() {
 
 
     std::cout << "" << std::endl;
-    std::cout << "You have defeated the slime, next round is the goblin.....";
+    std::cout << "You have defeated the slime, next round is the goblin....." << std::endl;
     std::cout << "Round 2: Goblin" << std::endl;
 
     while (hero.PlayerHealth > 0 && goblin.GoblinHealth > 0) {
@@ -132,7 +132,6 @@ void Gameplay() {
 
         std::cout << "Goblin Health: " << goblin.GoblinHealth << std::endl;
 
-        int hero_choice; 
 
         std::cout << " " << std::endl;
         std::cout << "Player: \n 1. Attack \n 2. Defend \n 3. Heal " << std::endl;
@@ -151,7 +150,7 @@ void Gameplay() {
 
 
             std::cout << "Hero dealth " << damage << " damage!" << std::endl;
-            std::cout << "Slime has " << goblin.GoblinHealth << " health left." << std::endl;
+            std::cout << "Goblin has " << goblin.GoblinHealth << " health left." << std::endl;
             std::cout << " " << std::endl;
 
             if (goblin.GoblinHealth <= 0) {
@@ -163,11 +162,53 @@ void Gameplay() {
             int enemyDamage = playerDefend(hero, goblin.GoblinAttack);
             hero.PlayerHealth -= enemyDamage;
 
-            std::cout << "Slime dealt " << enemyDamage << " damage!" << std::endl;
+            std::cout << "Goblin dealt " << enemyDamage << " damage!" << std::endl;
             std::cout << "Hero has " << hero.PlayerHealth << " health left." << std::endl;
             std::cout << " " << std::endl;
 
 
+
+        }
+
+          else if (hero_choice == 2) {
+
+            std::cout << "Hero Defend" << std::endl;
+            int defense = playerDefend(hero, goblin.GoblinAttack);
+
+            int enemyDamage = playerDefend(hero, goblin.GoblinAttack);
+            hero.PlayerHealth -= enemyDamage;
+            std::cout << " " << std::endl;
+
+            
+            std::cout << "Goblin dealt " << enemyDamage << " damage!" << std::endl;
+            std::cout << "Hero has " << hero.PlayerHealth << " health left." << std::endl;
+            std::cout << " " << std::endl;
+
+
+        }
+
+        else if (hero_choice == 3) {
+
+            std::cout << "Hero Heal" << std::endl;
+            playerHeal(hero);
+
+            int enemyDamage = goblin.GoblinAttack;
+            hero.PlayerHealth -= enemyDamage;
+            std::cout << " " << std::endl;
+
+
+            std::cout << "Goblin dealt " << enemyDamage << " damage!" << std::endl;
+            std::cout << "Hero has " << hero.PlayerHealth << " health left." << std::endl;
+            std::cout << " " << std::endl;
+
+            
+
+        }
+
+        else {
+
+            std::cout << "Invalid Option, Try Again" << std::endl;
+            std::cin >> hero_choice;
 
         }
 

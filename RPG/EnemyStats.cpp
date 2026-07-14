@@ -2,9 +2,9 @@
 #include "EnemyStats.h"
 
 
-SlimeStats slime = {30, 100, 5};
+SlimeStats slime = {30, 100, 30};
 
-GoblinStats goblin = {50, 50, 20};
+GoblinStats goblin = {50, 50, 40};
 
-MinotaurStats minotaur = {100, 30, 25};
+MinotaurStats minotaur = {100, 700, 60};
 

@@ -6,7 +6,7 @@
 
 int playerAttack(PlayerStats& player, int enemyDefense) {
 
-    int damage = player.PlayerAttack - (100 / (100 + enemyDefense));
+        int damage = (player.PlayerAttack * 100) / (100 + enemyDefense);
 
     if (damage < 1) {
 
