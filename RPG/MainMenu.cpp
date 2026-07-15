@@ -6,7 +6,7 @@
 
 void MainMenu::display() {
 
-    std::cout << "Welcome to the Jungle." << std::endl;
+    std::cout << "Welcome to the Dungeon." << std::endl;
     std::cout << " " << std::endl;
     std::cout << "1. Play" << std::endl;
     std::cout << "2. Credit" << std::endl; 
