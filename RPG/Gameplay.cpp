@@ -54,7 +54,7 @@ void Gameplay() {
                         
             }
 
-            int enemyDamage = playerDefend(hero, slime.SlimeAttack);
+            int enemyDamage = playerAttack(hero, slime.SlimeAttack);
             hero.PlayerHealth -= enemyDamage;
 
             std::cout << "Slime dealt " << enemyDamage << " damage!" << std::endl;
@@ -88,7 +88,7 @@ void Gameplay() {
             playerHeal(hero);
 
             int enemyDamage = slime.SlimeAttack;
-            hero.PlayerHealth -= enemyDamage;
+            hero.PlayerHealth -= enemyDamage / 2;
             std::cout << " " << std::endl;
 
 
@@ -154,7 +154,7 @@ void Gameplay() {
                         
             }
 
-            int enemyDamage = playerDefend(hero, goblin.GoblinAttack);
+            int enemyDamage = playerAttack(hero, goblin.GoblinAttack);
             hero.PlayerHealth -= enemyDamage;
 
             std::cout << "Goblin dealt " << enemyDamage << " damage!" << std::endl;
@@ -188,7 +188,7 @@ void Gameplay() {
             playerHeal(hero);
 
             int enemyDamage = goblin.GoblinAttack;
-            hero.PlayerHealth -= enemyDamage;
+            hero.PlayerHealth -= enemyDamage / 2;
             std::cout << " " << std::endl;
 
 
@@ -255,7 +255,7 @@ void Gameplay() {
                         
             }
 
-            int enemyDamage = playerDefend(hero, minotaur.MinotaurAttack);
+            int enemyDamage = playerAttack(hero, minotaur.MinotaurAttack);
             hero.PlayerHealth -= enemyDamage;
 
             std::cout << "Minotaur dealt " << enemyDamage << " damage!" << std::endl;
@@ -275,7 +275,7 @@ void Gameplay() {
             hero.PlayerHealth -= enemyDamage;
             std::cout << " " << std::endl;
 
-            
+
             std::cout << "Minotaur dealt " << enemyDamage << " damage!" << std::endl;
             std::cout << "Hero has " << hero.PlayerHealth << " health left." << std::endl;
             std::cout << " " << std::endl;
@@ -289,7 +289,7 @@ void Gameplay() {
             playerHeal(hero);
 
             int enemyDamage = minotaur.MinotaurAttack;
-            hero.PlayerHealth -= enemyDamage;
+            hero.PlayerHealth -= enemyDamage / 2;
             std::cout << " " << std::endl;
 
 
@@ -310,13 +310,13 @@ void Gameplay() {
 
     }
 
-    if (minotaur.MinotaurHealth < 0) {
+    if (minotaur.MinotaurHealth <= 0) {
 
     std::cout << "You did it Hero, you conquered the dungeon!" << std::endl;
 
     }
 
-    if (hero.PlayerHealth < 0) {
+    if (hero.PlayerHealth <= 0) {
         
         std::cout << "You die" << std::endl;
     }
