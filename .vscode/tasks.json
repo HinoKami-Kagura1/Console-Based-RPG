@@ -2,10 +2,11 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++ build active file",
-            "command": "/usr/bin/g++",
+            "label": "C/C++: clang++ build active file",
+            "command": "/usr/bin/clang++",
             "args": [
-                "-fdiagnostics-color=always",
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
                 "-g",
                 "main.cpp",
                 "MainMenu.cpp",
@@ -13,11 +14,12 @@
                 "Gameplay.cpp",
                 "PlayerStats.cpp",
                 "EnemyStats.cpp",
+                "CombatSystem.cpp",
                 "-o",
-                "${workspaceFolder}/RPG/Gameplay"
+                "main.exe"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
