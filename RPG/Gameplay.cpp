@@ -54,7 +54,7 @@ void Gameplay() {
                         
             }
 
-            int enemyDamage = playerAttack(hero, slime.SlimeAttack);
+            int enemyDamage = playerDefend(hero, slime.SlimeAttack);
             hero.PlayerHealth -= enemyDamage;
 
             std::cout << "Slime dealt " << enemyDamage << " damage!" << std::endl;
@@ -68,7 +68,6 @@ void Gameplay() {
         else if (hero_choice == 2) {
 
             std::cout << "Hero Defend" << std::endl;
-            int defense = playerDefend(hero, slime.SlimeAttack);
 
             int enemyDamage = playerDefend(hero, slime.SlimeAttack);
             hero.PlayerHealth -= enemyDamage;
@@ -269,8 +268,7 @@ void Gameplay() {
           else if (hero_choice == 2) {
 
             std::cout << "Hero Defend" << std::endl;
-            int defense = playerDefend(hero, minotaur.MinotaurAttack);
-
+            
             int enemyDamage = playerDefend(hero, minotaur.MinotaurAttack);
             hero.PlayerHealth -= enemyDamage;
             std::cout << " " << std::endl;
