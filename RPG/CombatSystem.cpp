@@ -19,7 +19,13 @@ int playerAttack(PlayerStats& player, int enemyDefense) {
 
 int playerDefend(PlayerStats& player, int enemyDamage) {
 
+<<<<<<< Updated upstream
     float reducedDamage =  enemyDamage - (enemyDamage * player.PlayerDefense / 100);;
+=======
+    float reduction = player.PlayerDefense / (player.PlayerDefense / 100.f);
+    
+    int reducedDamage = enemyDamage * 1.0f - reduction;
+>>>>>>> Stashed changes
 
     if (reducedDamage < 1) {
         

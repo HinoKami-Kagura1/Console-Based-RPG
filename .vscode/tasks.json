@@ -7,12 +7,17 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "main.cpp", "MainMenu.cpp", "Utils.cpp", "Gameplay.cpp", "PlayerStats.cpp", "EnemyStats.cpp",
+                "main.cpp",
+                "MainMenu.cpp",
+                "Utils.cpp",
+                "Gameplay.cpp",
+                "PlayerStats.cpp",
+                "EnemyStats.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${workspaceFolder}/RPG/Gameplay"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"

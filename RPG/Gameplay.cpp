@@ -8,6 +8,7 @@ void Gameplay() {
 
     //Attack Phase
 
+    int hero_choice; 
 
     std::cout << " " << std::endl;
     std::cout << "Round 1: Slime" << std::endl; 
@@ -26,7 +27,6 @@ void Gameplay() {
         
 
 
-        int hero_choice; 
 
         std::cout << " " << std::endl;
         std::cout << "Player: \n 1. Attack \n 2. Defend \n 3. Heal " << std::endl;
@@ -115,7 +115,6 @@ void Gameplay() {
 
     while (hero.PlayerHealth > 0 && goblin.GoblinHealth > 0) {
 
-        int hero_choice; 
 
         std::cout << " " << std::endl;
 
@@ -232,7 +231,6 @@ void Gameplay() {
         std::cout << " " << std::endl;
 
 
-        int hero_choice;
         std::cin >> hero_choice;
 
         if (hero_choice == 1) {
